@@ -19,7 +19,6 @@ steamgamedata/
 └── npm/                    # JavaScript version
     ├── package.json         # NPM package file
     ├── index.js             # Main script for NPM version
-    └── README.md            # Documentation for the NPM version
 ```
 
 ## Python Version (Pip)
