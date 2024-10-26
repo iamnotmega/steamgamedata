@@ -16,8 +16,7 @@ steamgamedata/
 │   │   ├── __init__.py      # Init file to make the directory a package
 │   │   └── core.py          # Core module with pull and write functions
 │   ├── requirements.txt     # Project dependencies for pip
-│   ├── setup.py             # Package setup script for pip installation
-│   └── test_script.py       # Script to test pip functionality
+│   └── setup.py             # Package setup script for pip installation
 └── npm/                    # JavaScript version
     ├── package.json         # NPM package file
     └── index.js             # Main script for NPM version
@@ -38,19 +37,11 @@ pip install .
 To use the Python package, you can pull game data and write it to a JSON file as follows:
 
 ```python
-from steamgamedata import core
+import steamgamedata
 
 appid = 620  # Example for Portal 2
-game_data = core.pull(appid)
-core.write("gamedata.json", game_data)
-```
-
-### Running the Test Script
-
-You can run the test script to see the package in action:
-
-```bash
-python test_script.py
+game_data = steamgamedata.pull(appid)  # Fetch game data using steamgamedata
+steamgamedata.write("gamedata.json", game_data)  # Save data to a JSON file using steamgamedata
 ```
 
 ## JavaScript Version (NPM)
@@ -68,10 +59,11 @@ npm install
 To use the JavaScript package, you can fetch game data and save it as follows:
 
 ```javascript
-const gameData = require('./index');
+const steamgamedata = require('./index');
 
 const appid = 620; // Example for Portal 2
-gameData.pull(appid);
+const gameData = steamgamedata.pull(appid); // Fetch game data using steamgamedata
+steamgamedata.write("gamedata.json", gameData); // Save data to a JSON file using steamgamedata
 ```
 
 ### Running the Main Script
